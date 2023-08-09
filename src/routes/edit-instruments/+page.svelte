@@ -1,6 +1,7 @@
 <script>
 	import { getContext } from 'svelte';
 	import { flip } from 'svelte/animate';
+	import { slide } from 'svelte/transition';
 	const instrumentData = getContext('instruments');
 
 	import {
@@ -63,7 +64,7 @@
 	<h1 class="text-4xl font-semibold">Edit instruments</h1>
 
 	{#each $instrumentData as instrument, i (instrument?.id ?? i)}
-		<div class="flex flex-col gap-4 p-4 rounded-lg shadow bg-gray-200 dark:bg-gray-950 w-96" animate:flip>
+		<div class="flex flex-col gap-4 p-4 rounded-lg shadow bg-gray-200 dark:bg-gray-950 w-96" animate:flip={{duration: 300}} out:slide>
 			<span class="text-xl font-medium">{instrument.type}</span>
 
 			{#if instrument.type === 'Soundfont'}

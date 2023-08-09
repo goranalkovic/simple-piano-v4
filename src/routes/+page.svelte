@@ -3,5 +3,8 @@
 	import KeyHandler from '../lib/KeyHandler.svelte';
 </script>
 
-<KeyHandler />
+<div class="p-10">
+	<KeyHandler />
 <DemoComp />
+
+</div>

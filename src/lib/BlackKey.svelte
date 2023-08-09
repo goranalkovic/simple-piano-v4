@@ -24,9 +24,9 @@
 	</div>
 {:else}
 	<div
-		class:bg-red-500={active}
-		class:dark:bg-red-800={active}
-		class="flex items-end w-12 p-0 m-0 text-center transition-colors border border-t-0 border-white cursor-pointer bg-gray-150 group h-28 keyboard-key dark:border-gray-800 dark:bg-gray-950 rounded-br-md rounded-bl-md"
+		class="flex items-end w-12 p-0 m-0 text-center transition-colors border border-t-0 border-white bg-slate-300 h-28 dark:border-gray-800 dark:bg-gray-950 rounded-br-md rounded-bl-md"
+		class:!bg-cyan-300={active}
+		class:dark:!bg-cyan-900={active}
 	>
 		<div class="flex flex-col pb-2 mx-auto mb-0.5 select-none pointer-events-none">
 			<!-- {#if $chordMode && $chordNotes[keyId]}
@@ -35,7 +35,7 @@
           class="leading-none text-gray-400 transition-colors transform scale-95 chord-label dark:text-gray-500 text-xxs">{@html $chordNotes[keyId]}</span>
       {/if} -->
 			<span
-				class="text-xs leading-none text-gray-700 dark:text-gray-200 flex flex-col gap-4 font-mono"
+				class="text-xs leading-none text-slate-950 dark:text-gray-200 flex flex-col gap-3 font-mono"
 			>
 				{#if active}
 					<div class="flex gap-0.5">

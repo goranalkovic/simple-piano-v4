@@ -15,8 +15,8 @@
 </script>
 
 <div
-	class:bg-red-400={active}
-	class:dark:bg-red-700={active}
+	class:bg-cyan-200={active}
+	class:dark:bg-cyan-700={active}
 	class="flex items-end w-12 h-48 p-0 m-0 text-center transition border-0 cursor-pointer bg-gray-50 dark:bg-gray-700 rounded-br-md rounded-bl-md"
 >
 	<div class="flex flex-col pb-2 mx-auto mb-0.5 select-none pointer-events-none">
@@ -28,7 +28,7 @@
       >
     {/if} -->
 		<span
-			class="flex flex-col gap-0.5 text-xs leading-none text-gray-700 dark:text-gray-200 font-mono"
+			class="flex flex-col gap-3 text-xs leading-none text-gray-700 dark:text-gray-200 font-mono"
 		>
 			{#if active}
 				<div class="flex gap-0.5">
