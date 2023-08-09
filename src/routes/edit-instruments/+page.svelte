@@ -16,7 +16,11 @@
 	const electricPianoInstrumentNames = getElectricPianoNames();
 	const malletInstrumentNames = getMalletNames();
 
-	import { Trash, PlusCircle, ArrowUp, ArrowDown } from 'phosphor-svelte';
+	import Trash from 'phosphor-svelte/lib/Trash';
+	import PlusCircle from 'phosphor-svelte/lib/PlusCircle';
+	import ArrowUp from 'phosphor-svelte/lib/ArrowUp';
+	import ArrowDown from 'phosphor-svelte/lib/ ArrowDown';
+
 	import { arrayMove, getRandomId, normalizeName } from '../../lib';
 
 	// console.log({
@@ -31,7 +35,7 @@
 	const addInstrument = () => {
 		let newInstr = {
 			type: newInstrType,
-			id: getRandomId(),
+			id: getRandomId()
 		};
 
 		if (newInstrType === 'Soundfont') {
@@ -57,14 +61,17 @@
 	};
 </script>
 
-
 <div class="m-10 space-y-10">
 	<a href="/">Back</a>
 
 	<h1 class="text-4xl font-semibold">Edit instruments</h1>
 
 	{#each $instrumentData as instrument, i (instrument?.id ?? i)}
-		<div class="flex flex-col gap-4 p-4 rounded-lg shadow bg-gray-200 dark:bg-gray-950 w-96" animate:flip={{duration: 300}} out:slide>
+		<div
+			class="flex flex-col gap-4 p-4 rounded-lg shadow bg-gray-200 dark:bg-gray-950 w-96"
+			animate:flip={{ duration: 300 }}
+			out:slide
+		>
 			<span class="text-xl font-medium">{instrument.type}</span>
 
 			{#if instrument.type === 'Soundfont'}

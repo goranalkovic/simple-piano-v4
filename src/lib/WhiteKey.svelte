@@ -7,7 +7,8 @@
 	import { fade } from 'svelte/transition';
 	const pressedKeys = getContext('pressedKeys');
 
-	import { CaretUp, CaretDown } from 'phosphor-svelte';
+	import CaretUp from "phosphor-svelte/lib/CaretUp";
+	import CaretDown from "phosphor-svelte/lib/CaretDown";
 
 	$: active = $pressedKeys?.[keyCode]?.pressed ?? false;
 	$: shiftUp = $pressedKeys?.[keyCode]?.shift ?? false;

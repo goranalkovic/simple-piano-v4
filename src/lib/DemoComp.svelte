@@ -3,7 +3,6 @@
 	const volume = getContext('volume');
 	const octaveShift = getContext('octaveShift');
 
-	import { PlusCircle, MinusCircle } from 'phosphor-svelte';
 	import { toast } from 'svelte-sonner';
 
 
