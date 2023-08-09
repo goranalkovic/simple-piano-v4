@@ -19,7 +19,7 @@
 	import Trash from 'phosphor-svelte/lib/Trash';
 	import PlusCircle from 'phosphor-svelte/lib/PlusCircle';
 	import ArrowUp from 'phosphor-svelte/lib/ArrowUp';
-	import ArrowDown from 'phosphor-svelte/lib/ ArrowDown';
+	import ArrowDown from 'phosphor-svelte/lib/ArrowDown';
 
 	import { arrayMove, getRandomId, normalizeName } from '../../lib';
 
